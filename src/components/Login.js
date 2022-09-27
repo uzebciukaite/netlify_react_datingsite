@@ -22,6 +22,7 @@ const validateUser = () => {
   }
 
   const options = {
+            mode: "cors",
             method: "POST",
             headers: {
                 "content-type":"application/json",

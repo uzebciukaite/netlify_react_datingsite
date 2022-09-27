@@ -22,7 +22,7 @@ const validateUser = () => {
   }
 
   const options = {
-            mode: "cors",
+            
             method: "POST",
             headers: {
                 "content-type":"application/json"
@@ -55,7 +55,7 @@ const validateUser = () => {
         const autologin = localStorage.getItem("autologin")
         if(autologin === "true") {
             const options = {
-                mode: "cors",
+                
                 method: "GET",
                 headers: {
                     "content-type":"application/json"

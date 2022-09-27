@@ -38,7 +38,7 @@ const savePhotos = () => {
         body: JSON.stringify(datatoUpdate)
 
     }
-       fetch("http://localhost:4000/uploadPhotos", options)
+       fetch("https://mern-dating-site.herokuapp.com/uploadPhotos", options)
       .then(res => res.json())
       .then((data) => {
         socket.emit("update_user", data.user)

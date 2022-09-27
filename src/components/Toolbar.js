@@ -23,7 +23,7 @@ function loguserout(){
             credentials: "include"
         }
 
-      fetch('http://localhost:4000/logout', options)
+      fetch('https://mern-dating-site.herokuapp.com/logout', options)
         .then(res => res.json())
         .then(data => {
           console.log(data.message)

@@ -101,13 +101,12 @@ const swiped = (direction, user, index) => {
      const options = {
         method: "POST",
         headers: {
-            "content-type": "application/json",
-            "Access-Control-Allow-Origin": 'http://localhost:3000',
+            "content-type": "application/json"
         },
         body: JSON.stringify(userInfo)
 
     }
-       fetch("http://localhost:4000/addlikes", options)
+       fetch("https://mern-dating-site.herokuapp.com/addlikes", options)
       .then(res => res.json())
       .then((data) => {        
         

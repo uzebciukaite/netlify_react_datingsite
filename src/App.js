@@ -10,7 +10,7 @@ import ProfilePage from './pages/ProfilePage';
 import SwipePage from './pages/SwipePage';
 import LikesPage from './pages/LikesPage';
 import io from "socket.io-client"
-const socket = io.connect("http://localhost:4000")
+const socket = io.connect("https://mern-dating-site.herokuapp.com")
 
 
 function App() {

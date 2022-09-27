@@ -49,7 +49,7 @@ const setFilterSettings = async () => {
         body: JSON.stringify(filters)
 
     }
-       fetch("http://localhost:4000/filter", options)
+       fetch("https://mern-dating-site.herokuapp.com/filter", options)
       .then(res => res.json())
       .then((data) => {
         if(!data.error){

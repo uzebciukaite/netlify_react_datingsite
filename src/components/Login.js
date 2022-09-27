@@ -30,7 +30,7 @@ const validateUser = () => {
             credentials: "include"
         }
 
-  fetch("http://localhost:4000/logUser/", options)
+  fetch("https://mern-dating-site.herokuapp.com/logUser/", options)
     .then(res => res.json())
     .then(data => {
     if(data.error){
@@ -61,7 +61,7 @@ const validateUser = () => {
                 credentials: "include"
             }
 
-            fetch('http://localhost:4000/autologin', options)
+            fetch('https://mern-dating-site.herokuapp.com/autologin', options)
                 .then(res => res.json())
                 .then(data => {
                   

@@ -38,7 +38,7 @@ const registerUser = () => {
         body: JSON.stringify(newUser)
 
     }
-       fetch("http://localhost:4000/regUser", options)
+       fetch("https://mern-dating-site.herokuapp.com/regUser", options)
       .then(res => res.json())
       .then((data) => {
         if(!data.error){

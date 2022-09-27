@@ -24,8 +24,7 @@ const validateUser = () => {
   const options = {
             method: "POST",
             headers: {
-                "Content-Type":"application/json",
-                
+                "content-type":"application/json",
             },
             body: JSON.stringify(user),
             credentials: "include"
@@ -57,9 +56,7 @@ const validateUser = () => {
             const options = {
                 method: "GET",
                 headers: {
-                    "Content-Type":"application/json",
-                    
-
+                    "content-type":"application/json",  
                 },
                 credentials: "include"
             }

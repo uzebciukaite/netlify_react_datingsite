@@ -25,10 +25,10 @@ const validateUser = () => {
             
             method: "POST",
             headers: {
-                "content-type":"application/json"
+                "content-type": "application/json"
             },
-            body: JSON.stringify(user),
-            credentials: "include"
+            body: JSON.stringify(user)
+            
         }
 
   fetch("https://mern-dating-site.herokuapp.com/logUser/", options)
@@ -60,8 +60,8 @@ const validateUser = () => {
                 headers: {
                     "content-type":"application/json"
                     
-                },
-                credentials: "include"
+                }
+                
             }
 
             fetch('https://mern-dating-site.herokuapp.com/autologin', options)

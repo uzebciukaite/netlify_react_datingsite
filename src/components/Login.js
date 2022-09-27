@@ -24,9 +24,8 @@ const validateUser = () => {
   const options = {
             method: "POST",
             headers: {
-                "content-type":"application/json",
-                'Accept': 'application/json',
-                'Origin':'https://extraordinary-biscotti-befba4.netlify.app'
+                "Content-Type":"application/json",
+                
             },
             body: JSON.stringify(user),
             credentials: "include"
@@ -58,9 +57,8 @@ const validateUser = () => {
             const options = {
                 method: "GET",
                 headers: {
-                    "content-type":"application/json",
-                    'Accept': 'application/json',
-                    'Origin':'https://extraordinary-biscotti-befba4.netlify.app'
+                    "Content-Type":"application/json",
+                    
 
                 },
                 credentials: "include"

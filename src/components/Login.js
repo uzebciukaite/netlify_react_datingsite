@@ -25,6 +25,9 @@ const validateUser = () => {
             method: "POST",
             headers: {
                 "content-type":"application/json",
+                "Accept": 'application/json',
+                'Access-Control-Allow-Origin': 'https://extraordinary-biscotti-befba4.netlify.app',
+                'Access-Control-Allow-Credentials': 'true'
             },
             body: JSON.stringify(user),
             credentials: "include"
@@ -54,9 +57,13 @@ const validateUser = () => {
         const autologin = localStorage.getItem("autologin")
         if(autologin === "true") {
             const options = {
+                mode: "cors",
                 method: "GET",
                 headers: {
                     "content-type":"application/json",  
+                    "Accept": 'application/json',
+                    'Access-Control-Allow-Origin': 'https://extraordinary-biscotti-befba4.netlify.app',
+                    'Access-Control-Allow-Credentials': 'true'
                 },
                 credentials: "include"
             }

@@ -22,10 +22,11 @@ const validateUser = () => {
   }
 
   const options = {
-            mode: "cors",
+            
             method: "POST",
             headers: {
-                "content-type": "application/json"
+                "Content-Type": "application/json",
+                "Accept": "application/json"
             },
             body: JSON.stringify(user),
             credentials: "include"
@@ -52,32 +53,32 @@ const validateUser = () => {
 
     }
 
-    useEffect(() => {
-        const autologin = localStorage.getItem("autologin")
-        if(autologin === "true") {
-            const options = {
-                mode: "cors",
-                method: "GET",
-                headers: {
-                    "content-type":"application/json"
-                    
-                },
-                credentials: "include"
+  //   useEffect(() => {
+  //       const autologin = localStorage.getItem("autologin")
+  //       if(autologin === "true") {
+  //           const options = {
                 
-            }
-
-            fetch('https://mern-dating-site.herokuapp.com/autologin', options)
-                .then(res => res.json())
-                .then(data => {
-                  
-                  if(!data.error) {
-                        socket.emit("connect_user", data.user)
-                        nav('/profile')
-                    }
+  //               method: "GET",
+  //               headers: {
+  //                   "Content-Type":"application/json"
                     
-                })
-        }
-    }, [])
+  //               },
+  //               credentials: "include"
+                
+  //           }
+
+  //           fetch('https://mern-dating-site.herokuapp.com/autologin', options)
+  //               .then(res => res.json())
+  //               .then(data => {
+                  
+  //                 if(!data.error) {
+  //                       socket.emit("connect_user", data.user)
+  //                       nav('/profile')
+  //                   }
+                    
+  //               })
+  //       }
+  //   }, [])
 
 
    

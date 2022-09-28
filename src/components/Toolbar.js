@@ -10,32 +10,32 @@ const Toolbar = () => {
 const {logedinUser, setLogedinUser, canSwipe, setCanSwipe} = useContext(mainContext)  
 const nav = useNavigate()
 
-function loguserout(){
+// function loguserout(){
 
-  const autologin = localStorage.getItem("autologin")
+ 
 
-  if(autologin === true) {
-      const options = {
-            method: "GET",
-            headers: {
-                "content-type":"application/json"
-            },
-            credentials: "include"
-        }
+//   if(autologin === true) {
+//       const options = {
+//             method: "GET",
+//             headers: {
+//                 "content-type":"application/json"
+//             },
+            
+//         }
 
-      fetch('https://mern-dating-site.herokuapp.com/logout', options)
-        .then(res => res.json())
-        .then(data => {
-          console.log(data.message)
-        })      
-        } 
-  localStorage.setItem("autologin", "false")
-  setLogedinUser(null)
-  setCanSwipe(false)
-  nav("/")
+//       fetch('https://mern-dating-site.herokuapp.com/logout', options)
+//         .then(res => res.json())
+//         .then(data => {
+//           console.log(data.message)
+//         })      
+//         } 
+//   localStorage.setItem("autologin", "false")
+//   setLogedinUser(null)
+//   setCanSwipe(false)
+//   nav("/")
   
   
-}
+// }
 
   return (
 

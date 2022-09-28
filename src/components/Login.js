@@ -45,37 +45,37 @@ const validateUser = () => {
 }
 
 
-  const autoLoginTrigger = (e) => {
-      localStorage.setItem("autologin", String(e.target.checked))
-      setStaylogged(e.target.checked)
+  // const autoLoginTrigger = (e) => {
+  //     localStorage.setItem("autologin", String(e.target.checked))
+  //     setStaylogged(e.target.checked)
 
-    }
+  //   }
 
-    useEffect(() => {
-        const autologin = localStorage.getItem("autologin")
-        if(autologin === "true") {
-            const options = {
+  //   useEffect(() => {
+  //       const autologin = localStorage.getItem("autologin")
+  //       if(autologin === "true") {
+  //           const options = {
                 
-                method: "GET",
-                headers: {
-                    "content-type":"application/json"
+  //               method: "GET",
+  //               headers: {
+  //                   "content-type":"application/json"
                     
-                }
+  //               }
                 
-            }
+  //           }
 
-            fetch('https://mern-dating-site.herokuapp.com/autologin', options)
-                .then(res => res.json())
-                .then(data => {
+  //           fetch('https://mern-dating-site.herokuapp.com/autologin', options)
+  //               .then(res => res.json())
+  //               .then(data => {
                   
-                  if(!data.error) {
-                        socket.emit("connect_user", data.user)
-                        nav('/profile')
-                    }
+  //                 if(!data.error) {
+  //                       socket.emit("connect_user", data.user)
+  //                       nav('/profile')
+  //                   }
                     
-                })
-        }
-    }, [])
+  //               })
+  //       }
+  //   }, [])
 
 
    
@@ -92,14 +92,14 @@ const validateUser = () => {
            
     <input type="text" ref={userLogRef} placeholder="username"/>
     <input type="password" ref={passLogRef} placeholder="password"/>
-    <Form.Check 
+    {/* <Form.Check 
         type="switch"
         id="custom-switch"
         label="Keep me signed in"
         className={!staylogged ? "" : "stayloggedin"}
         
         onChange={autoLoginTrigger}
-      />
+      /> */}
     
        
     <Button

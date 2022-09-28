@@ -31,7 +31,7 @@ const validateUser = () => {
             
         }
 
-  fetch("https://mern-dating-site.herokuapp.com/logUser/", options)
+  fetch("https://mern-dating-site.herokuapp.com/logUser", options)
     .then(res => res.json())
     .then(data => {
     if(data.error){
